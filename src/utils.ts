@@ -102,7 +102,6 @@ export type Input = Uint8Array | string;
  */
 export function toBytes(data: Input): Uint8Array {
   if (typeof data === 'string') data = utf8ToBytes(data);
-  if (!u8a(data)) throw new Error(`expected Uint8Array, got ${typeof data}`);
   return data;
 }
 
